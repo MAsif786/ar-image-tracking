@@ -1,0 +1,11 @@
+Model Information:
+* title:	My 3D Bussiness Card
+* source:	https://sketchfab.com/3d-models/my-3d-bussiness-card-6417b959e5c640a8bab6a4c3c04d3f9a
+* author:	AdiKoriat (https://sketchfab.com/AdiKoriat)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "My 3D Bussiness Card" (https://sketchfab.com/3d-models/my-3d-bussiness-card-6417b959e5c640a8bab6a4c3c04d3f9a) by AdiKoriat (https://sketchfab.com/AdiKoriat) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

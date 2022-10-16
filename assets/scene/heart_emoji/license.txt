@@ -1,0 +1,11 @@
+Model Information:
+* title:	3moji.org : Smiling Face With Hearts
+* source:	https://sketchfab.com/3d-models/3mojiorg-smiling-face-with-hearts-b3a901e349a64d079c3f24bbd9bc260e
+* author:	Jeremy Edelblut (https://sketchfab.com/jeremy.toys)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "3moji.org : Smiling Face With Hearts" (https://sketchfab.com/3d-models/3mojiorg-smiling-face-with-hearts-b3a901e349a64d079c3f24bbd9bc260e) by Jeremy Edelblut (https://sketchfab.com/jeremy.toys) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
