@@ -1,0 +1,11 @@
+Model Information:
+* title:	Игровая (турникет и горка) (Модульное)
+* source:	https://sketchfab.com/3d-models/83a7a4f09b4144bd90c452c8ba26b578
+* author:	Dmitriy Mitroshin (https://sketchfab.com/LtxxwSibeRia)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Игровая (турникет и горка) (Модульное)" (https://sketchfab.com/3d-models/83a7a4f09b4144bd90c452c8ba26b578) by Dmitriy Mitroshin (https://sketchfab.com/LtxxwSibeRia) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
