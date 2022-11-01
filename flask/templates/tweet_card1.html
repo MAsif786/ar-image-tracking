@@ -1,0 +1,179 @@
+<!-- <html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <style>
+      
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #1488cc;
+  background: -webkit-linear-gradient(to right, #2b32b2, #1488cc);
+  background: linear-gradient(to right, #2b32b2, #1488cc);
+}
+
+.blog_post {
+  background: #fff;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+
+.container_copy {
+  padding: 6rem 4rem 5rem 4rem;
+}
+
+.img_pod {
+  height: 80px;
+  width: 80px;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  z-index: 10;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  position: absolute;
+  left: -8%;
+  top: -8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-profile {
+  position: relative;
+  border-radius: 100%;
+  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+h3 {
+  margin: 0 0 0.5rem 0;
+  color: #999;
+  font-size: 1.25rem;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+  color: #333;
+}
+
+p {
+  margin: 0 0 4.5rem 0;
+  font-size: 1.5rem;
+  line-height: 1.45;
+  color: #333;
+}
+
+.btn_primary {
+  border: none;
+  outline: none;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  padding: 1.5rem 2rem;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+
+.btn_primary:hover {
+  box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
+}
+
+@media only screen and (max-width: 650px) {
+  body {
+    background-color: black;
+  }
+
+  .img_pod {
+
+  }
+}
+    </style>
+  </head>
+    <body>
+      <div class="blog_post">
+        <div class="img_pod">
+          <img class="img-profile" src="{{ tweet.user.profile_image_url }}" alt="random image">
+        </div>
+        <div class="container_copy">
+          <h3>{{ tweet.created_at.strftime('%Y-%m-%d') }}</h3>
+          <h1>{{ tweet.user.screen_name }}</h1>
+          {% if tweet.media_url %}
+            <img width="100%" height="150px" src="{{ tweet['media_url'] }}" alt="">
+          {% endif %}
+          <p>{{ tweet.full_text }}</p>
+          <a class="btn_primary" href='#' target="_blank">Read More</a>
+        </div>
+        
+      </div>
+      
+    </body>
+</html> -->
+
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+    </head>
+    <body>
+        <a-scene mindar-image="imageTargetSrc: {{ url_for('static', filename='markers/harpin/harpin_logo.mind') }};" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+        <a-assets>
+          <img id="tweet_image" src="{{ tweet.media_url }}">
+        </a-assets>
+        <a-entity mindar-image-target="targetIndex: 0">
+          <!-- Aframe image -->
+          <!-- {% if tweet.media_url %} -->
+            <a-image src="#tweet_image" width="1" height="0.9" position="-1 0 0"></a-image>
+          <!-- {% endif %} -->
+          <!-- <a-plane width="1" height="0.9" position="0 0 0"
+          material="color: #F5F8FA;"
+          text="value: {{ tweet.user.screen_name }}; baseline:; align: left; color: #333; width: 0.9; height:0.1; color:red; wrapCount: 25; zOffset: 0.01; font: https://cdn.aframe.io/fonts/Roboto-msdf.json; shader: msdf; transparent: true; alphaTest: 0.5; side: front; "
+          text__2="value: {{ tweet.full_text }}; baseline:top; align: left; color: #14171A; width: 0.9; height:1; wrapCount: 30; zOffset: 0.01; font: https://cdn.aframe.io/fonts/Roboto-msdf.json; shader: msdf; transparent: true; alphaTest: 0.5; side: front; "
+          >
+          </a-plane> -->
+          
+            <a-entity
+            position="0 0.4 0"
+            geometry="primitive: plane; width: 1; height: 0.1"
+            material="shader: flat;"
+            text="value: {{ tweet.user.screen_name }}; color: #14171A; wrapCount:30;"></a-entity>
+            <a-entity
+            position="0 0.1 0"
+            geometry="primitive: plane; width: 1; height: 0.6;"
+            material="shader: flat"
+            text="value: {{ tweet.full_text }}; color: #14171A; wrapCount:35;"></a-entity>
+            
+            <a-entity
+            position="0 -0.3 0"
+            geometry="primitive: plane; width: 1; height: 0.3;"
+            material="shader: flat"
+            text="value: Likes: {{ tweet.favorite_count }} Retweet: {{ tweet.retweet_count }}; color: #14171A; wrapCount:35;"></a-entity>
+          
+            <!-- <a-entity text="text: {{ tweet.full_text }};" position="0 0 0" height="1.5" width="0.9"></a-entity> -->
+            <!-- <a-entity gltf-model="{{ url_for('static', filename='scene/heart_emoji/scene.gltf') }}" scale="1 1 1" position="0 0 0" rotation="0 0 0"></a-entity> -->
+            <!-- <a-plane color="blue" opaciy="0.5" position="0 0 0" height="1.5" width="0.9" rotation="0 0 0"></a-plane> -->
+        </a-entity>
+        </a-scene>
+    </body>
+</html>
